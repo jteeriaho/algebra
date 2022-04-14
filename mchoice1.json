@@ -1,0 +1,114 @@
+[
+    {
+        "question": "Q1. Sievenna $x^{4}x^{3}$ . Valitse oikea sievennetty muoto",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "$x^{7}$",
+                "correct": true,
+                "feedback": "Oikein. Kaava $x^{m}x^{n}=x^{m+n}$."
+            },
+            {
+                "answer": "$x^{12}$",
+                "correct": false,
+                "feedback": "Vaarin."
+            },
+            {
+                "answer": "$x^{1}$",
+                "correct": false,
+                "feedback": "Vaarin."
+            }
+
+
+        ]
+    },
+    {
+        "question": "Q2.  Sievenna ${(-2 a^{2}b^{3})}^{3}$ . Valitse oikea sievennetty muoto",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "$-2 a^{5}b^{6}$",
+                "correct": false,
+                "feedback": "Vaarin. Yrita uudelleen."
+            },
+            {
+                "answer": "$8 a^{6} b^{9}$",
+                "correct": false,
+                "feedback": "Vaarin. Yrita uudelleen."
+            },
+            {
+                "answer": "$-8 a^{6} b^{9}$",
+                "correct": true,
+                "feedback": "Oikein. Kaava ${x y}^{n} = x^{n}y^{n}$"
+            }
+        ]
+
+    },
+
+    {
+        "question": "Q3. Sievenna $(a^3)^4$",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "$a^{81}$",
+                "correct": false,
+                "feedback": "Vaarin. Yrita uudelleen."
+            },
+            {
+                "answer": "$a^7$",
+                "correct": false,
+                "feedback": "Vaarin. Yrita uudelleen."
+            },
+            {
+                "answer": "$a^{12}$",
+                "correct": true,
+                "feedback": "Oikein. Kaava $(x^{m})^{n}$ = $x^{m n}$ "
+            }
+        ]
+
+    },
+    {
+        "question": "Q4.  Sievenna $ \\frac {2 x^2 y^2}{4 x^5 y}$ . Valitse oikea/oikeat muodot",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "$ \\frac {y}{2 x^3}$",
+                "correct": true,
+                "feedback": "Oikein."
+            },
+            {
+                "answer": "$ \\frac {2 x^3 y}{y}$",
+                "correct": false,
+                "feedback": "Vaarin. Yrita uudelleen."
+            },
+            {
+                "answer": "$\\frac {1}{2} x^{-3} y$",
+                "correct": true,
+                "feedback": "Oikein.$"
+            }
+        ]
+
+    },
+    {
+        "question": "Q5.  Sievenna $ (\\frac {-x^3 y^2}{7 x^2 y})^0$ . Valitse oikea muoto",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "1",
+                "correct": true,
+                "feedback": "Oikein. Kaava $x^0 = 1$"
+            },
+            {
+                "answer": "$-\\frac {x y}{7}$",
+                "correct": false,
+                "feedback": "Vaarin. Yrita uudelleen."
+            },
+            {
+                "answer": "$-\\frac {1}{7} x y$",
+                "correct": false,
+                "feedback": "Vaarin. Yrita uudelleen."
+            }
+        ]
+
+    }
+]

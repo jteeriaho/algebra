@@ -1,0 +1,151 @@
+<html>
+<head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+
+<title>VEKTORILASKIN</title>
+
+
+
+<script type="text/javascript">
+
+
+function Laske()
+
+{
+var b1=document.koe.b1.value
+var b2=document.koe.b2.value
+var b3=document.koe.b3.value
+var a1=document.koe.a1.value
+var a2=document.koe.a2.value
+var a3=document.koe.a3.value
+var pita
+var pitb
+var dotpr
+var skalpr
+var kulma
+var p1
+var p2
+var p3
+var r1
+var r2
+var r3
+var pit
+pita=Math.sqrt(a1*a1+a2*a2+a3*a3);
+document.koe.pita.value=pita;
+pitb=Math.sqrt(b1*b1+b2*b2+b3*b3);
+document.koe.pitb.value=pitb;
+dotpr=a1*b1+a2*b2+a3*b3;
+document.koe.dotpr.value=dotpr;
+skalpr=dotpr/pitb;
+document.koe.skalpr.value=skalpr;
+kulma=Math.acos(dotpr/(pita*pitb))*180/3.1428;
+document.koe.kulma.value=kulma;
+p1=skalpr*b1/pitb;
+p2=skalpr*b2/pitb;
+p3=skalpr*b3/pitb;
+document.koe.p1.value=p1;
+document.koe.p2.value=p2;
+document.koe.p3.value=p3;
+r1=a2*b3-b2*a3;
+r2=a3*b1-b3*a1;
+r3=a1*b2-b1*a2;
+document.koe.r1.value=r1;
+document.koe.r2.value=r2;
+document.koe.r3.value=r3;
+pit=Math.sqrt(r1*r1+r2*r2+r3*r3);
+document.koe.pit.value=pit;
+}
+</script>
+
+
+</head>
+
+<body>
+
+
+<form name="koe">
+    <br><b>VEKTORILASKURI</b><br><hr>
+Laskee vektorien pituudet, piste- ja ristitulon, skalaari- ja vektoriprojektiot <br><br>
+
+    
+<b>Anna vektorien komponentit:</b>
+    <br>
+    
+a: <input type="text" size="5" name="a1">
+    
+<input type="text" size="5" name="a2">
+    
+<input type="text" size="5" name="a3">
+    <br>
+    
+b: <input type="text" size="5" name="b1">
+    
+<input type="text" size="5" name="b2">
+    
+<input type="text" size="5" name="b3">
+    <br>
+ <br>
+
+
+<input type="button" value="Laske kaikki: " onclick="Laske()">
+<br><br>
+    
+<b>a:n pituus</b> 
+<input type="text" size="5" name="pita">
+    <br><br>
+
+<b>b:n pituus</b> 
+
+<input type="text" size="5" name="pitb">
+    <br><br>
+
+<b>pistetulo a.b</b> 
+
+<input type="text" size="5" name="dotpr">
+    <br><br>
+
+
+<b>vektorien valinen kulma asteina</b> 
+
+<input type="text" size="5" name="kulma">
+<br><br>
+
+  
+<b>a:n skalaariprojektio b:n suuntaan</b> 
+
+<input type="text" size="5" name="skalpr">
+ <br><br>
+
+
+
+<b>a:n vektoriprojektio b:n suunnassa</b> 
+
+<input type="text" size="5" name="p1">
+    
+<input type="text" size="5" name="p2">
+    
+<input type="text" size="5" name="p3">
+  <br>  <br>
+
+<b>ristitulovektori a x b</b> 
+<input type="text" size="5" name="r1">
+
+
+<input type="text" size="5" name="r2">
+    
+<input type="text" size="5" name="r3">
+    <br><br>
+
+<b>ristitulovektorin pituus (= suunnikkaan ala)</b> 
+
+<input type="text" size="5" name="pit">
+    <br>
+
+
+    
+</form>
+
+
+
+
+</body>
+</html>

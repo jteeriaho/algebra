@@ -1,0 +1,21 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro
+chapters:
+- file: prosenttilaskut
+- file: potenssit
+- file: juuret
+- file: murtoluvut
+- file: polynomit
+- file: 1aste
+- file: 2aste
+- file: yhtaloparit
+- file: lineaarimalli
+- file: 2asteenmalli
+- file: itseisarvo
+- file: verrannollisuus
+- file: mittakaava
+- file: muutyhtalot
+- file: eksponenttilog
