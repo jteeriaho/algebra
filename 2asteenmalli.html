@@ -1,0 +1,477 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Paraabeli ja 2. asteen polynomimalli &#8212; Algebra</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Itseisarvo- ja juuriyhtälöt" href="itseisarvo.html" />
+    <link rel="prev" title="Suoran yhtälö ja lineaarinen malli" href="lineaarimalli.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Algebra</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Algebran oppimateriaalia
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="prosenttilaskut.html">
+   Prosenttilaskut
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="potenssit.html">
+   Potenssien laskusäännöt
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="juuret.html">
+   Juurilausekkeet
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="murtoluvut.html">
+   Murtoluvut ja murtolausekkeet
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="polynomit.html">
+   Polynomien peruslaskutoimitukset
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="1aste.html">
+   1. asteen yhtälöt ja epäyhtälöt
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="2aste.html">
+   2. asteen yhtälöt ja epäyhtälöt
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="yhtaloparit.html">
+   Yhtälöparit
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="lineaarimalli.html">
+   Suoran yhtälö ja lineaarinen malli
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Paraabeli ja 2. asteen polynomimalli
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="itseisarvo.html">
+   Itseisarvo- ja juuriyhtälöt
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="verrannollisuus.html">
+   Verrannollisuus
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="mittakaava.html">
+   Mittakaava
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="muutyhtalot.html">
+   Muita yhtälötyyppejä
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="eksponenttilog.html">
+   Eksponenttimalli ja logaritmi
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/2asteenmalli.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2F2asteenmalli.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/2asteenmalli.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#paraabeli-y-a-x2-b-x-c">
+   Paraabeli y = a x² + b x + c
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#toisen-asteen-polynomimalli">
+   Toisen asteen polynomimalli
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Paraabeli ja 2. asteen polynomimalli</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#paraabeli-y-a-x2-b-x-c">
+   Paraabeli y = a x² + b x + c
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#toisen-asteen-polynomimalli">
+   Toisen asteen polynomimalli
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="paraabeli-ja-2-asteen-polynomimalli">
+<h1>Paraabeli ja 2. asteen polynomimalli<a class="headerlink" href="#paraabeli-ja-2-asteen-polynomimalli" title="Permalink to this headline">¶</a></h1>
+<section id="paraabeli-y-a-x2-b-x-c">
+<h2>Paraabeli y = a x² + b x + c<a class="headerlink" href="#paraabeli-y-a-x2-b-x-c" title="Permalink to this headline">¶</a></h2>
+<div class="tip admonition">
+<p class="admonition-title">Paraabelin aukeamissuunta</p>
+<p>Paraabelin aukeamissuunta määräytyy parametrin a etumerkistä:</p>
+<p>Jos a&gt;0, paraabeli aukeaa ylöspäin
+Jos a&lt;0, paraabeli aukeaa alaspäin</p>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Paraabelin leikkauspisteet x- akselin kanssa</p>
+<p>Paraabeli leikkaa x- akselia yhtälön <span class="math notranslate nohighlight">\(a x² + b x + c=0\)</span> nollakohdissa, mikäli niitä on.<br />
+Nollakohdat saadaan ratkaisukaavalla <span class="math notranslate nohighlight">\(x = \frac{-b\pm \sqrt{b^2-4ac}}{2a}\)</span>
+Nollakohtien lukumäärä riippuu diskriminantin <span class="math notranslate nohighlight">\(D = b^2-4ac\)</span> etumerkistä.</p>
+<p>Jos D&gt;0, paraabeli leikkaa x-akselia kahdessa pisteessä<br />
+Jos D=0, paraabeli sivuaa x- akseli pisteessä <span class="math notranslate nohighlight">\(b = -\frac{b}{2a}\)</span><br />
+Jos D&lt;0, paraabeli ei leikkaa x- akselia</p>
+</div>
+<a class="reference internal image-reference" href="_images/para4.PNG" id="parabolas"><img alt="_images/para4.PNG" id="parabolas" src="_images/para4.PNG" style="width: 400px; height: 300px;" /></a>
+<p>Paraabelin piirtämisen kannalta tärkeä piste on paraabelin huippu,<br />
+jonka x-koordinaatti on nollakohtien keskiarvo <span class="math notranslate nohighlight">\(\frac{1}{2}\cdot (\frac{-b-\sqrt{b^2-4ac}}{2a}+\frac{-b+\sqrt{b^2-4ac}}{2a}) \)</span> = <span class="math notranslate nohighlight">\(-\frac{b}{2a}\)</span></p>
+<div class="tip admonition">
+<p class="admonition-title">Paraabelin huipun koordinaatit</p>
+<p>Huipun x-koordinaatti <span class="math notranslate nohighlight">\(x_h = -\frac{b}{2a}\)</span><br />
+Huipun y-koordinaatti <span class="math notranslate nohighlight">\(y_h = a {x_h}^2 + b x_h + c\)</span></p>
+</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Piirrä paraabeli <span class="math notranslate nohighlight">\(y=x^2-3x+2\)</span>. Laske nollakohdat ja huipun koordinaatit</p>
+<p>Parametrit a = 1, b = -3 ja c = 2<br />
+Juuret ovat 1 ja 2  (ratkaisukaavalla tai W.A:n solve x² -3x+2 = 0)<br />
+Huippu: <span class="math notranslate nohighlight">\(x_h = -\frac{b}{2a}\)</span> =<span class="math notranslate nohighlight">\(\frac{3}{2}\)</span><br />
+<span class="math notranslate nohighlight">\(y_h = (\frac{3}{2})^2-3\cdot \frac{3}{2}+1=-\frac{1}{4}\)</span></p>
+<p><img alt="para5" src="_images/para5.PNG" /></p>
+</div>
+</section>
+<section id="toisen-asteen-polynomimalli">
+<h2>Toisen asteen polynomimalli<a class="headerlink" href="#toisen-asteen-polynomimalli" title="Permalink to this headline">¶</a></h2>
+<p>Toisen asteen polynomimallista puhutaan silloin kuin jokin reaalimaailman ongelma voidaan mallintaa käyttämällä toisen asteen polynomilla.</p>
+<p>Malli sopii esim. fysiikassa vinon heittoliikkeen mallinnukseen. Sitä voi soveltaa lukuisiin muihinkin tilanteisiin mm. talousmatematiikassa.</p>
+<p>Esim. Ammuksen lentorata.<br />
+Ammuksen paikan y-koordinaatti lennon aikana voidaan laskea kaavalla</p>
+<p><span class="math notranslate nohighlight">\(y = y_0 + v_0\cdot sin(\alpha) t - \frac{1}{2}g\cdot t^2\)</span></p>
+<p>missä t=aika, g=9.8, <span class="math notranslate nohighlight">\(v_0\)</span> = lähtönopeus, <span class="math notranslate nohighlight">\(\alpha\)</span> = lähtökulma.</p>
+<blockquote>
+<div><p>Oletetaan, että ammus lähtee 40 m korkean kukkulan laelta lähtönopeudella 500 m/s kulmaan 20 astetta.</p>
+</div></blockquote>
+<p><img alt="ammus" src="_images/ammus.PNG" /></p>
+<div class="dropdown admonition">
+<p class="admonition-title">Laske a) milloin ammus putoaa mereen b) mikä on lennon lakikorkeus?</p>
+<p>Sijoitetaan kaavaan <span class="math notranslate nohighlight">\(y_0 =40, v_0=500, \alpha=20^{\circ}\)</span>.<br />
+Lentoradan y-koordinaatin yhtälö saa muodon <span class="math notranslate nohighlight">\(y = 40 + 171 t - 4.9 t^2\)</span></p>
+<p>a) Maahantulohetkellä y = 0, joten se saadaan ratkaisemalla <span class="math notranslate nohighlight">\(40 + 171 t - 4.9 t^2 = 0\)</span>.<br />
+WolframAlphalla <em>solve 40 + 171t - 4.9 t^2=0</em> antaa juuret -0.23 ja 35.13, joista jälkimmäinen<br />
+on kysytty mereentulohetki.</p>
+<p>b) Lakikorkeus y saadaan määrittämällä paraabelin huippu:<br />
+huipun aikakoordinaatti:  <span class="math notranslate nohighlight">\(t_h = -\frac{171}{2*(-4.9)} = 17.5 s\)</span><br />
+huipun y -koordinaatti:   <span class="math notranslate nohighlight">\(y_h = 40 + 171\cdot 17.5 - 4.9\cdot {17.5}^2 \approx \)</span> 1530 m</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>WolframAlpha laskimessa on komennot sekä nollakohtien, että huipun laskemiseen:<br />
+solve <span class="math notranslate nohighlight">\(ax^2 + bx + c = 0\)</span>    (nollakohdat)<br />
+<strong>maximize</strong> <span class="math notranslate nohighlight">\(ax^2 + bx + c\)</span>  antaa huipun koordinaatit, jos paraabelin huippu on maksimikohta<br />
+<strong>minimize</strong> <span class="math notranslate nohighlight">\(ax^2 + bx + c\)</span>  antaa huipun koordinaatit, jos paraabelin huippu on minimikohta</p>
+</div>
+<p>Edellisessä ammus-esimerkissä komento maximize <span class="math notranslate nohighlight">\(40 + 171 t - 4.9 t^2\)</span>  antaa tuloksen seuraavassa muodossa:</p>
+<p><em>max{40+171 t- 4.9 t² } = 1531.9 at t = 17.45</em></p>
+<blockquote>
+<div><p>Seuraava esimerkki liittyy kysynnän ja tarjonnan lakiin talousmatematiikassa</p>
+</div></blockquote>
+<div class="dropdown admonition">
+<p class="admonition-title">Erään tuotteen valmistuskustannukset ovat 6 euroa. Kun merkitään tuotteen hintaa X:llä, kate myydystä tuotteesta on X-6. Myyntimäärä Y riippuu hinnasta kaavan Y = 500 - 10 X mukaisesti. Laske tuotteelle sellainen hinta X, että myyntitulot ovat mahdollisimman suuret. </p>
+<p>Myyntitulot = myyntimäärä * kate per tuote = (500-10X)(X-6). Sievennetty myyntituottojen lauseke on<br />
+<span class="math notranslate nohighlight">\(500 X - 3000 - 10X^2 + 60X \)</span> = <span class="math notranslate nohighlight">\(-10X^2 + 560 X - 3000\)</span><br />
+Lausekkeen kuvaaja on alaspäin aukeava paraabeli parametrein a=-10, b = 560 ja c = -3000.</p>
+<p>Sen maksimikohdassa X = <span class="math notranslate nohighlight">\(-\frac{b}{2a}\)</span> = 560/20 = 28.<br />
+Vastaus: parhaan tuoton antava myyntihinta on <strong>28 euroa</strong></p>
+<p><img alt="huippu" src="_images/huippu.PNG" /></p>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="lineaarimalli.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Suoran yhtälö ja lineaarinen malli</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="itseisarvo.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Itseisarvo- ja juuriyhtälöt</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Jouko Teeriaho<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

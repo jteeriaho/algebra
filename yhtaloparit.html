@@ -1,0 +1,626 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Yhtälöparit &#8212; Algebra</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Suoran yhtälö ja lineaarinen malli" href="lineaarimalli.html" />
+    <link rel="prev" title="2. asteen yhtälöt ja epäyhtälöt" href="2aste.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Algebra</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Algebran oppimateriaalia
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="prosenttilaskut.html">
+   Prosenttilaskut
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="potenssit.html">
+   Potenssien laskusäännöt
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="juuret.html">
+   Juurilausekkeet
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="murtoluvut.html">
+   Murtoluvut ja murtolausekkeet
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="polynomit.html">
+   Polynomien peruslaskutoimitukset
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="1aste.html">
+   1. asteen yhtälöt ja epäyhtälöt
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="2aste.html">
+   2. asteen yhtälöt ja epäyhtälöt
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Yhtälöparit
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="lineaarimalli.html">
+   Suoran yhtälö ja lineaarinen malli
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="2asteenmalli.html">
+   Paraabeli ja 2. asteen polynomimalli
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="itseisarvo.html">
+   Itseisarvo- ja juuriyhtälöt
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="verrannollisuus.html">
+   Verrannollisuus
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="mittakaava.html">
+   Mittakaava
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="muutyhtalot.html">
+   Muita yhtälötyyppejä
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="eksponenttilog.html">
+   Eksponenttimalli ja logaritmi
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/yhtaloparit.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fyhtaloparit.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/yhtaloparit.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lineaariset-yhtaloparit">
+   Lineaariset yhtälöparit
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lineaarisen-yhtaloparin-ratkaisukaava">
+   Lineaarisen yhtälöparin ratkaisukaava
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#matriisi-neliomatriisi-ja-determinantti">
+     Matriisi, neliömatriisi ja determinantti
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#lineaarisen-yhtaloparin-ratkaisukaavan-determinanttimuoto">
+     Lineaarisen yhtälöparin ratkaisukaavan determinanttimuoto
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#epalineaarinen-yhtalopari">
+   Epälineaarinen yhtälöpari
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Yhtälöparit</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lineaariset-yhtaloparit">
+   Lineaariset yhtälöparit
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lineaarisen-yhtaloparin-ratkaisukaava">
+   Lineaarisen yhtälöparin ratkaisukaava
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#matriisi-neliomatriisi-ja-determinantti">
+     Matriisi, neliömatriisi ja determinantti
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#lineaarisen-yhtaloparin-ratkaisukaavan-determinanttimuoto">
+     Lineaarisen yhtälöparin ratkaisukaavan determinanttimuoto
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#epalineaarinen-yhtalopari">
+   Epälineaarinen yhtälöpari
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="yhtaloparit">
+<h1>Yhtälöparit<a class="headerlink" href="#yhtaloparit" title="Permalink to this headline">¶</a></h1>
+<section id="lineaariset-yhtaloparit">
+<h2>Lineaariset yhtälöparit<a class="headerlink" href="#lineaariset-yhtaloparit" title="Permalink to this headline">¶</a></h2>
+<div class="tip admonition">
+<p class="admonition-title">Lineaarisen yhtälöparin perusmuoto    </p>
+<p><span class="math notranslate nohighlight">\(\begin{matrix}
+a_1 x + a_2 y = b_1\\
+a_3 x + a_4 y = b_2
+\end{matrix}\)</span></p>
+</div>
+<p>Muuttujat x ja y ovat vasemmalla puolen omissa sarakkeissaan, vakiot oikealla puolen yhtälöitä.</p>
+<p>Perinteisiä ratkaisutapoja ovat  <strong>eliminoimismenetelmä</strong> ja <strong>sijoitusmenetelmä</strong></p>
+<div class="tip admonition">
+<p class="admonition-title">Eliminoimismenetelmä</p>
+<p>Kerrotaan jompikumpi tai molemmat yhtälöistä sopivilla vakioilla siten, että<br />
+jommankumman muuttujan kertoimet yhtälöissä ovat vastaluvut.<br />
+Lasketaan yhtälöt yhteen, jolloin saadaan 1. asteen yhtälö, josta toinen muuttujista voidaan ratkaista
+Ratkaistu muuttuja sijoitetaan johonkin alkuperäisistä yhtälöistä ja ratkaistan toinen muuttuja.</p>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Esim. Ratkaise eliminoimismenetelmällä yhtälöpari    </p>
+<p><span class="math notranslate nohighlight">\(\begin{matrix}
+2x-5y=-4\\
+3x+2y=13
+\end{matrix}\)</span></p>
+<div class="dropdown admonition">
+<p class="admonition-title">Ratkaisu</p>
+<p>Kerrotaan 1. yhtälö luvulla 2 ja 2. yhtälö luvulla 5 , jolloin saadaan<br />
+<span class="math notranslate nohighlight">\(\begin{matrix}
+4x-10y=-8 \\
+15x+10y=65
+\end{matrix}\)</span></p>
+<p>Lasketaan yhtälöt puolittain yhteen. Saadaan 19 x = 57, josta x = 57/19 = 3<br />
+Sijoitetaan tämä 1. yhtälöön, jolloin saadaan 2*3-5y=-4 eli 10 = 5y , josta y = 2</p>
+<p>Vastaus:  <strong>x = 3 ja y = 2</strong></p>
+</div>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Sijoitusmenetelmä</p>
+<ol class="simple">
+<li><p>Ratkaistaan 1. (tai 2.) yhtälö esim. x:n suhteen.</p></li>
+<li><p>Sijoitetaan saatu lauseke kyseisen x:n tilalle toiseen yhtälöön, josta ratkaistaan y.</p></li>
+<li><p>x saadaan sijoittamalla y kohdassa 1. saatuun lausekkeeseen</p></li>
+</ol>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Esim. Ratkaise sijoitusmenetelmällä yhtälöpari </p>
+<p><span class="math notranslate nohighlight">\(\begin{matrix}
+2x-5y=-4 \\
+3x+2y=13
+\end{matrix}\)</span></p>
+<div class="dropdown admonition">
+<p class="admonition-title">Ratkaisu</p>
+<ol class="simple">
+<li><p>Ratkaistaan 1. yhtälö x:n suhteen. Saadaan 2x=5y-4 , josta x = 5/2y - 2</p></li>
+<li><p>Sijoitetaan tämä 2.:een yhtälöön =&gt; 3(5/2y-2)+2y = 13 =&gt; 15/2 y -6 + 2y=13 =&gt; 19/2 y = 19 =&gt; y = 2</p></li>
+<li><p>Sijoitetaan tämä kohdassa 1 saatuun lausekkeeseen =&gt; x = <span class="math notranslate nohighlight">\(5/2\cdot2-2\)</span> = 3</p></li>
+</ol>
+<p>Vastaus:  <strong>x = 3 ja y = 2</strong></p>
+</div>
+</div>
+</section>
+<section id="lineaarisen-yhtaloparin-ratkaisukaava">
+<h2>Lineaarisen yhtälöparin ratkaisukaava<a class="headerlink" href="#lineaarisen-yhtaloparin-ratkaisukaava" title="Permalink to this headline">¶</a></h2>
+<p>Kun ratkaistaan WolframAlpha-laskimen solvella lineaarisen yhtälöparin yleinen muoto, saadaan tuloksena käyttökelpoinen yleinen ratkaisukaava.</p>
+<p><img alt="kaava" src="_images/kaava.PNG" /></p>
+<p>Kaavan lausekkeet ovat hankalan näköisiä murtolausekkeita, mutta ne voidaan esittää hyvin yksinkertaisella tavalla ottamalla käyttöön <strong>determinantin</strong> käsite.</p>
+<section id="matriisi-neliomatriisi-ja-determinantti">
+<h3>Matriisi, neliömatriisi ja determinantti<a class="headerlink" href="#matriisi-neliomatriisi-ja-determinantti" title="Permalink to this headline">¶</a></h3>
+<div class="tip admonition">
+<p class="admonition-title">Matriisi</p>
+<p>2 -ulotteista lukutaulukkoa kutsutaan <strong>matriisiksi</strong>
+Esim. ao. matriisia A sanotaa 2x3 matriisiksi (2 riviä, 3 saraketta)</p>
+<p><span class="math notranslate nohighlight">\( A = \begin{pmatrix}
+1 &amp; 5 &amp; 4 \\
+3 &amp; 2 &amp; 1
+\end{pmatrix} \)</span></p>
+<p>Tärkeitä matriiseja ovat <strong>neliömatriisit</strong>.
+Alla olevaa matriisia sanotaan 2x2 neliömatriisiksi</p>
+<p><span class="math notranslate nohighlight">\(B = \begin{pmatrix}
+1 &amp; 5  \\
+3 &amp; 2
+\end{pmatrix}\)</span></p>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">2x2 neliömatriisin determinantti   </p>
+<p>Neliömatriiseihin liittyy reaaliluku, jota sanotaan <strong>determinantiksi</strong>.
+Determinantissa matriisin sulkujen tilalla ovat pystyviivat.</p>
+<p>2x2-determinantti lasketaan lävistäjäalkioiden tulojen erotuksena:</p>
+<p><span class="math notranslate nohighlight">\(\begin{vmatrix}
+a &amp; b \\
+c &amp; d
+\end{vmatrix} = a\cdot d - c\cdot b\)</span></p>
+<p>Esim.<br />
+<span class="math notranslate nohighlight">\(\begin{vmatrix}
+2 &amp; 4 \\
+1 &amp; 5
+\end{vmatrix} = 2\cdot 5- 1\cdot 4 = 6\)</span></p>
+</div>
+<p>Useimpiin laskimiin voi nykyään syöttää matriisin ja laskea determinantin.
+WolframAlpha -laskimessa yo. determinantti lasketaan komennolla <strong>det ((2,4),(1,5))</strong></p>
+<div class="note admonition">
+<p class="admonition-title">Laske determinantti   </p>
+<p><span class="math notranslate nohighlight">\(\begin{vmatrix}
+3 &amp; -5 \\
+1 &amp;  2
+\end{vmatrix}\)</span></p>
+<div class="dropdown admonition">
+<p class="admonition-title">Ratkaisu</p>
+<p>Determinantin arvo on <span class="math notranslate nohighlight">\(3\cdot 2-1\cdot (-5) = 11\)</span></p>
+</div>
+</div>
+</section>
+<section id="lineaarisen-yhtaloparin-ratkaisukaavan-determinanttimuoto">
+<h3>Lineaarisen yhtälöparin ratkaisukaavan determinanttimuoto<a class="headerlink" href="#lineaarisen-yhtaloparin-ratkaisukaavan-determinanttimuoto" title="Permalink to this headline">¶</a></h3>
+<div class="tip admonition">
+<p class="admonition-title">“Cramerin kaavat lineaarisen yhtälöparin ratkaisussa”</p>
+<p>Yhtälöryhmän
+<span class="math notranslate nohighlight">\(\begin{matrix}
+a_1 x + a_2 y = b_1\\
+a_3 x + a_4 y = b_2
+\end{matrix}\)</span> ratkaisut saadaan kaavoista</p>
+<p><span class="math notranslate nohighlight">\(x = \frac{Dx}{D}\)</span></p>
+<p><span class="math notranslate nohighlight">\(y = \frac{Dy}{D}\)</span></p>
+<p>D = <span class="math notranslate nohighlight">\(\begin{vmatrix}
+a_1 &amp; a_2 \\
+a_3 &amp;  a_4
+\end{vmatrix}\)</span>   (vasemman puolen kertoimien muodostama determinantti)</p>
+<p>Dx = <span class="math notranslate nohighlight">\(\begin{vmatrix}
+b_1 &amp; a_2 \\
+b_2 &amp;  a_4
+\end{vmatrix}\)</span>   (D:n sarake 1 korvattu oikean puolen vakioilla)</p>
+<p>Dy = <span class="math notranslate nohighlight">\(\begin{vmatrix}
+a_1 &amp; b_1 \\
+a_3 &amp;  b_2
+\end{vmatrix}\)</span>   (D:ssä sarake 2 korvattu oikean puolen vakioilla)</p>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Ratkaise yhtälöpari </p>
+<p><span class="math notranslate nohighlight">\(\begin{matrix}
+2 x - 5 y = -4\\
+3 x + 2 y = 13
+\end{matrix}\)</span></p>
+<div class="dropdown admonition">
+<p class="admonition-title">Ratkaisu</p>
+<p>D = <span class="math notranslate nohighlight">\(\begin{vmatrix}
+2 &amp; -5 \\
+3 &amp;  2
+\end{vmatrix}\)</span> = <span class="math notranslate nohighlight">\(2\cdot2-3\cdot(-5)\)</span> = 19</p>
+<p>Dx = <span class="math notranslate nohighlight">\(\begin{vmatrix}
+-4 &amp; -5 \\
+13 &amp;  2
+\end{vmatrix}\)</span> = <span class="math notranslate nohighlight">\(-4\cdot2-13\cdot(-5)\)</span> = 57</p>
+<p>Dy = <span class="math notranslate nohighlight">\(\begin{vmatrix}
+2 &amp; -4 \\
+3 &amp;  13
+\end{vmatrix}\)</span>  = <span class="math notranslate nohighlight">\(2\cdot13-3\cdot(-4)\)</span> = 38</p>
+<p>Cramerin kaavoilla saadaan ratkaisuksi
+x = Dx/D = 57/19 = 3, y = Dy/D = 38/19 = 2</p>
+</div>
+</div>
+<p>Determinanttikaavojen etu on se, että ne automatisoivat lineaarisen yhtöparin ratkaisun ja kaavat on helppo koodata laskimiin.  Determinantti on myös Excel taulukkolaskentaohjelmassa : funktio MDETERM</p>
+</section>
+</section>
+<section id="epalineaarinen-yhtalopari">
+<h2>Epälineaarinen yhtälöpari<a class="headerlink" href="#epalineaarinen-yhtalopari" title="Permalink to this headline">¶</a></h2>
+<p>Jos yhtälöparissa esiintyy muuttujien korkeampia potensseja, murto- tai erikoisfunktioita, yhtälöpari ei ole lineaarinen.</p>
+<blockquote>
+<div><p>Käytännössä epälineaarisen yhtälöparin voi ratkaista esim. WolframAplhan solvella.</p>
+</div></blockquote>
+<blockquote>
+<div><p>Manluaalisesti helpoimmin ratkaistavia ovat yhtälöparit, joissa toinen yhtälöistä on lineaarinen. Tällöin voidaan käyttää sijoitusmenetelmää seuraavaan tapaan.</p>
+</div></blockquote>
+<div class="note admonition">
+<p class="admonition-title">Ratkaise yhtälöpari</p>
+<p><span class="math notranslate nohighlight">\(\begin{matrix}
+2 x - y = 1\\
+x^2 + y^2 = 13
+\end{matrix}\)</span></p>
+<div class="dropdown admonition">
+<p class="admonition-title">Ratkaisu</p>
+<p>Ratkaistaan lineaarinen yhtälö y:n suhteen. Saadaan y = 2x -1<br />
+Sijoitetaan lausele 2x-1 y:n tilalle yhtälöön 2 ja sievennetään tämä 2. asteen yhtälöksi<br />
+<span class="math notranslate nohighlight">\(x^2 + (2x-1)^2 = 13\)</span><br />
+<span class="math notranslate nohighlight">\(x^2 + 4x^2-4x+1 = 13\)</span><br />
+<span class="math notranslate nohighlight">\(5x^2 - 4x -12 = 0\)</span><br />
+juuret: x1 = 2 tai x2 = -6/5<br />
+Molemmille x-arvoille lasketaan niitä vastaava y-arvo:<br />
+<span class="math notranslate nohighlight">\(y1=2\cdot2-1 = 3\)</span>  ja  <span class="math notranslate nohighlight">\(y2 = 2\cdot(-6/5)-1 = -17/5\)</span></p>
+<p>Vastaus: Ratkaisuna ovat pisteparit (2,3) ja (-6/5, -17/5)</p>
+</div>
+</div>
+<p>Esimerkin yhtälöparin voisi ratkaista myös graafisesti. 1. yhtälö on suoran yhtälö ja 2. yhtälö on ympyrän yhtälö.  Yhtälöparin ratkaisut edustavat suoran ja ympyrän leikkauspisteitä.  WolframAlpha tuottaa ao. kuvan komennolla <strong>plot 2x-y=1, x^2+y^2=13</strong></p>
+<p><img alt="ypari" src="_images/ypari.PNG" /></p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="2aste.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">2. asteen yhtälöt ja epäyhtälöt</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="lineaarimalli.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Suoran yhtälö ja lineaarinen malli</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Jouko Teeriaho<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

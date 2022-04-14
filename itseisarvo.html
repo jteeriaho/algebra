@@ -1,0 +1,547 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Itseisarvo- ja juuriyhtälöt &#8212; Algebra</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Verrannollisuus" href="verrannollisuus.html" />
+    <link rel="prev" title="Paraabeli ja 2. asteen polynomimalli" href="2asteenmalli.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Algebra</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Algebran oppimateriaalia
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="prosenttilaskut.html">
+   Prosenttilaskut
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="potenssit.html">
+   Potenssien laskusäännöt
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="juuret.html">
+   Juurilausekkeet
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="murtoluvut.html">
+   Murtoluvut ja murtolausekkeet
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="polynomit.html">
+   Polynomien peruslaskutoimitukset
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="1aste.html">
+   1. asteen yhtälöt ja epäyhtälöt
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="2aste.html">
+   2. asteen yhtälöt ja epäyhtälöt
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="yhtaloparit.html">
+   Yhtälöparit
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="lineaarimalli.html">
+   Suoran yhtälö ja lineaarinen malli
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="2asteenmalli.html">
+   Paraabeli ja 2. asteen polynomimalli
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Itseisarvo- ja juuriyhtälöt
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="verrannollisuus.html">
+   Verrannollisuus
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="mittakaava.html">
+   Mittakaava
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="muutyhtalot.html">
+   Muita yhtälötyyppejä
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="eksponenttilog.html">
+   Eksponenttimalli ja logaritmi
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/itseisarvo.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fitseisarvo.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/itseisarvo.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#luvun-itseisarvo">
+   Luvun itseisarvo
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#itseisarvofunktio">
+   Itseisarvofunktio
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#itseisarvoyhtalon-ratkaisutapoja">
+   Itseisarvoyhtälön ratkaisutapoja
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#juuriyhtalot">
+   Juuriyhtälöt
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Itseisarvo- ja juuriyhtälöt</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#luvun-itseisarvo">
+   Luvun itseisarvo
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#itseisarvofunktio">
+   Itseisarvofunktio
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#itseisarvoyhtalon-ratkaisutapoja">
+   Itseisarvoyhtälön ratkaisutapoja
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#juuriyhtalot">
+   Juuriyhtälöt
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="itseisarvo-ja-juuriyhtalot">
+<h1>Itseisarvo- ja juuriyhtälöt<a class="headerlink" href="#itseisarvo-ja-juuriyhtalot" title="Permalink to this headline">¶</a></h1>
+<section id="luvun-itseisarvo">
+<h2>Luvun itseisarvo<a class="headerlink" href="#luvun-itseisarvo" title="Permalink to this headline">¶</a></h2>
+<div class="tip admonition">
+<p class="admonition-title">Luvun itseisarvo</p>
+<p>Reaaliluvun <strong>itseisarvo</strong> (engl. absolute value) on luvun etäisyys origosta lukusuoralla.<br />
+Se on luvun etumerkitön arvo.   Luvun a itseisarvoa merkitään <strong>|a|</strong>. Itseisarvon muodollinen määritelmä on<br />
+<span class="math notranslate nohighlight">\(
+\left| a \right|= 
+\begin{cases}
+\hspace{3mm}a, kun\hspace{2mm} a\ge 0\\
+-a,kun\hspace{2mm} a\lt 0
+\end{cases}
+\)</span></p>
+</div>
+<p>Positiivisen luvun ja nollan itseisarvo on luku itse,  esim. |3| = 3.<br />
+Negatiivisen luvun itseisarvo on luvun vastaluku, esim. |-5| = 5</p>
+<div class="tip admonition">
+<p class="admonition-title">Lukujen a ja b etäisyys lukusuoralla</p>
+<p>Lukujen a ja b etäisyys lukusuoralla voidaan esittää muodossa |a - b|</p>
+<p><span class="math notranslate nohighlight">\(\text{ a }\overset{|a-b|}{\overbrace{\text{______} }}\text{ b}\)</span></p>
+</div>
+</section>
+<section id="itseisarvofunktio">
+<h2>Itseisarvofunktio<a class="headerlink" href="#itseisarvofunktio" title="Permalink to this headline">¶</a></h2>
+<div class="tip admonition">
+<p class="admonition-title">Itseisarvofunktio y = |x|</p>
+<p>Itseisarvofunktion määritelmä on
+<span class="math notranslate nohighlight">\(
+\left| x \right|= 
+\begin{cases}
+\hspace{3mm}x, kun\hspace{2mm} x\ge 0\\
+-x,kun\hspace{2mm} x\lt 0
+\end{cases}
+\)</span></p>
+<p>Sen kuvaaja koostuu kahdesta puolisuorasta ao. kuvan mukaisesti.</p>
+<p><img alt="itsarvo" src="_images/abs1.PNG" /></p>
+</div>
+</section>
+<section id="itseisarvoyhtalon-ratkaisutapoja">
+<h2>Itseisarvoyhtälön ratkaisutapoja<a class="headerlink" href="#itseisarvoyhtalon-ratkaisutapoja" title="Permalink to this headline">¶</a></h2>
+<p>Itseisarvoyhtälöitä ratkaistaan jakamalla ne useammaksi yhtälöksi, jotka ovat voimassa eri osaväleillä.</p>
+<p>Eräissä tapauksissa niitä voi ratkaista myös korottamalla yhtälön puolet toiseen potenssiin tai käyttämällä erotuksen itseisarvon tulkintaa lukujen välimatkana lukusuoralla.<br />
+Graafinenkin ratkaisu on mahdollinen.</p>
+<div class="tip admonition">
+<p class="admonition-title">Esim. Ratkaise <span class="math notranslate nohighlight">\(|x + 3| = 2\)</span> ym. ratkaisutapoja käyttäen. </p>
+<p>Vastaus x = -5 tai x = -1</p>
+<div class="dropdown admonition">
+<p class="admonition-title">Tapa1. Yhtälön jakaminen useaksi yhtälöksi </p>
+<p>Korvataan |x + 3| eri lausekkeilla eri osissa lukusuoraa
+<span class="math notranslate nohighlight">\(
+\left| x + 3 \right|= 
+\begin{cases}
+\hspace{3mm}x +3, kun\hspace{2mm} x\ge -3\\
+-x-3,kun\hspace{2mm} x\lt -3
+\end{cases}
+\)</span></p>
+<p>Saadaan kaksi yhtälöä:</p>
+<p><span class="math notranslate nohighlight">\( 
+\begin{cases}
+\hspace{3mm}x + 3 =2, kun\hspace{2mm} x\ge -3\\
+-x-3 = 2,kun\hspace{2mm} x\lt -3
+\end{cases}
+\)</span></p>
+<p>Ylemmästä yhtälöstä saadaan juuri x = 2-3 = -1, alemmasta -x = 2+3 , josta saadaan toiseksi juureksi x = -5</p>
+</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Tapa2. Yhtälön neliöinti</p>
+<p>Yhtälössä |x+3|=2 molemmat puolet &gt; 0, joten neliöimällä saadaan yhtäpitävä yhtälö
+<span class="math notranslate nohighlight">\((x+3)^2 = 4\)</span><br />
+Sulut poistamalla saadaan 2. asteen yhtälö<br />
+<span class="math notranslate nohighlight">\(x^2 + 6x + 5 = 0\)</span><br />
+Yhtälön juuret ovat -5 ja -1</p>
+</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Tapa3. Etäisyystulkinnan käyttö</p>
+<p>Yhtälö voidaan kirjoittaa |x- (-3)| = 2,  jonka geometrinen tulkinta on<br />
+“x:n etäisyys -3:sta on 2”. Ehdon toteuttavat lukusuoran luvut -5 ja -1.</p>
+</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Tapa4. Graafinen ratkaisu</p>
+<p>Piirretään samaan kuvaan yhtälön molemmat puolet |x+3| ja 2. Yhtälön ratkaisu löytyy leikkauspisteiden x-koordinaateista, jotka ovat -5 ja -1<br />
+<img alt="kuva5" src="_images/abs2.PNG" /></p>
+</div>
+</div>
+</section>
+<section id="juuriyhtalot">
+<h2>Juuriyhtälöt<a class="headerlink" href="#juuriyhtalot" title="Permalink to this headline">¶</a></h2>
+<p>Tarkastellaan tyyppiä <span class="math notranslate nohighlight">\(\sqrt{P(x)}=Q(x)\)</span> olevia juuriyhtälöitä. Niiden ratkaisemisessa voidaan käyttää sääntöä <span class="math notranslate nohighlight">\(a = b =&gt; a^2 = b^2\)</span></p>
+<p>Käytännössä tämä tarkoittaa, että jos <span class="math notranslate nohighlight">\(x_0\)</span> on yhtälön <span class="math notranslate nohighlight">\(\sqrt{P(x)}=Q(x)\)</span> juuri, niin <span class="math notranslate nohighlight">\(x_0\)</span> on myös yhtälön <span class="math notranslate nohighlight">\(P(x)={Q(x)}^2\)</span> juuri.</p>
+<p>Neliöidyllä yhtälöllä voi olla myös juuria, jotka eivät ole alkuperäisen yhtälön juuria. Tämä johtaa seuraavaan algoritmiin juuriyhtälön ratkaisemiseksi.</p>
+<div class="tip admonition">
+<p class="admonition-title">Tyyppiä <span class="math notranslate nohighlight">\(\sqrt{P(x)}=Q(x)\)</span> olevan juuriyhtälön ratkaiseminen</p>
+<ol class="simple">
+<li><p>Korota yhtälön molemmat puolet toiseen.</p></li>
+<li><p>Ratkaise yhtälön <span class="math notranslate nohighlight">\(P(x)={Q(x)}^2\)</span> juuret</p></li>
+<li><p>Sijoita kohdassa 2 saadut juuret alkuperäiseen yhtälöön selvittääksesi mitkä juurista<br />
+ovat alkuperäisen yhtälön ratkaisuja.</p></li>
+</ol>
+</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Ratkaise yhtälö <span class="math notranslate nohighlight">\(\sqrt{x+1}= x - 5\)</span> </p>
+<p>Vastaus: x = 8</p>
+<div class="dropdown admonition">
+<p class="admonition-title">Ratkaisu</p>
+<p>Korotetaan molemmat puolet toiseen ja sievennetään yhtälöä<br />
+<span class="math notranslate nohighlight">\((x+1) = (x-5)^2\)</span><br />
+<span class="math notranslate nohighlight">\(x+1 = x^2 - 10x + 25\)</span>
+<span class="math notranslate nohighlight">\(0 = x^2 - 11x + 24\)</span><br />
+x=3 tai x=8<br />
+Tarkistetaan, mitkä neliöidyn yhtälön ratkaisuista ovat alkuperäisen yhtälön ratkaisuja.<br />
+<span class="math notranslate nohighlight">\(\sqrt{3+1}= 3 - 5 \hspace{4mm} 2 = -2\)</span>  EPÄTOSI<br />
+<span class="math notranslate nohighlight">\(\sqrt{8+1}= 8 - 5 \hspace{4mm} 3 = 3\)</span>   TOSI<br />
+Tehtävän ratkaisu on siten x = 8.</p>
+</div>
+</div>
+<p>Usein juuriyhtälöt tulevat vastaan suureyhtälöiden ratkaisun yhteydessä. Tällöin useimmiten tarkistusta ei tarvita.</p>
+<div class="dropdown admonition">
+<p class="admonition-title">Ratkaise g yhtälöstä <span class="math notranslate nohighlight">\(T = 2\pi \sqrt{\frac{r}{g}}\)</span></p>
+<p>Vastaus: <span class="math notranslate nohighlight">\(g = \frac{4{\pi}^2r}{T^2}\)</span></p>
+<div class="dropdown admonition">
+<p class="admonition-title">Ratkaisu</p>
+<p>Korotetaan molemmat puolet toiseen ja ratkaistaan g<br />
+<span class="math notranslate nohighlight">\(T = 2\pi \sqrt{\frac{r}{g}}\)</span><br />
+<span class="math notranslate nohighlight">\(T^2 = \frac{4{\pi}^2r}{g}\)</span><br />
+<span class="math notranslate nohighlight">\(g T^2 = 4{\pi}^2 r\)</span><br />
+<span class="math notranslate nohighlight">\(g = \frac{4{\pi}^2r}{T^2}\)</span></p>
+</div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="2asteenmalli.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Paraabeli ja 2. asteen polynomimalli</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="verrannollisuus.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Verrannollisuus</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Jouko Teeriaho<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
