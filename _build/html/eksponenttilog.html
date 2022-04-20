@@ -46,8 +46,8 @@
     <script src="_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
-    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script>
         const thebe_selector = ".thebe"
@@ -451,9 +451,11 @@ t = aika</p>
 <p>a) A(30 vrk) = <span class="math notranslate nohighlight">\(35000*0.5^{30/8} = 2601\)</span><br />
 b) Ratkaistaan t eksponenttiyhtälöstä<br />
 <span class="math notranslate nohighlight">\(35000*0.5^{(t/8)} = 10\)</span></p>
-<p>Yhtälö viedään ensin perusmuotoon jakamalla puolittain 35000 :lla
-<span class="math notranslate nohighlight">\(0.5^{(t/8)} = 10/35000 = 0.000286\)</span>                 Tästä ratkaitaan ensin eksponentti t/8
-<span class="math notranslate nohighlight">\(t/8 = log(0.000286)/log(0.5) = 11.77\)</span>                Kerrotaan molemmat puolet 8:lla</p>
+<p>Yhtälö viedään ensin perusmuotoon jakamalla puolittain 35000 :lla</p>
+<p><span class="math notranslate nohighlight">\(0.5^{(t/8)} = 10/35000 = 0.000286\)</span><br />
+Tästä ratkaitaan ensin eksponentti t/8
+<span class="math notranslate nohighlight">\(t/8 = log(0.000286)/log(0.5) = 11.77\)</span><br />
+Tämän jälkeen molemmat puolet kerrotaan luvulla 8</p>
 <p><span class="math notranslate nohighlight">\(t = 11.77\cdot 8\)</span> vrk = 95 vrk</p>
 </div>
 </div>
