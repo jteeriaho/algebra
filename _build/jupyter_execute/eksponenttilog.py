@@ -108,9 +108,12 @@
 # b) Ratkaistaan t eksponenttiyhtälöstä     
 # $35000*0.5^{(t/8)} = 10$   
 # 
-# Yhtälö viedään ensin perusmuotoon jakamalla puolittain 35000 :lla
-# $0.5^{(t/8)} = 10/35000 = 0.000286$                 Tästä ratkaitaan ensin eksponentti t/8
-# $t/8 = log(0.000286)/log(0.5) = 11.77$                Kerrotaan molemmat puolet 8:lla      
+# Yhtälö viedään ensin perusmuotoon jakamalla puolittain 35000 :lla   
+# 
+# $0.5^{(t/8)} = 10/35000 = 0.000286$                 
+# Tästä ratkaitaan ensin eksponentti t/8
+# $t/8 = log(0.000286)/log(0.5) = 11.77$                
+# Tämän jälkeen molemmat puolet kerrotaan luvulla 8       
 # 
 # $t = 11.77\cdot 8$ vrk = 95 vrk
 # ```

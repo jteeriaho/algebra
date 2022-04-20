@@ -32,11 +32,11 @@
 
 # ````{admonition} Esim. Laske $\frac{2b}{a}\cdot \frac{3a^2}{14x}$
 # :class: dropdown
-# Vastaus $\frac {6ab}{14x}$
+# Vastaus $\frac {3ab}{7x}$
 # ```{admonition} Ratkaisu:  
 # :class: dropdown
 # Osoittajat ja nimittäjät yhdistetään yhdeksi murtolausekkeeksi   
-# $ \frac{2b}{a}\cdot \frac{3a^2}{14x}=\frac{6a^2b}{14ax}=\frac {6ab}{14x}$
+# $ \frac{2b}{a}\cdot \frac{3a^2}{14x}=\frac{6a^2b}{14ax}=\frac {3ab}{7x}$
 # ```
 # ````
 

@@ -123,12 +123,12 @@
 # :class: dropdown
 # Korotetaan molemmat puolet toiseen ja sievennetään yhtälöä    
 # $(x+1) = (x-5)^2$    
-# $x+1 = x^2 - 10x + 25$
+# $x+1 = x^2 - 10x + 25$     
 # $0 = x^2 - 11x + 24$   
 # x=3 tai x=8    
 # Tarkistetaan, mitkä neliöidyn yhtälön ratkaisuista ovat alkuperäisen yhtälön ratkaisuja.    
-# $\sqrt{3+1}= 3 - 5 \hspace{4mm} 2 = -2$  EPÄTOSI    
-# $\sqrt{8+1}= 8 - 5 \hspace{4mm} 3 = 3$   TOSI    
+# $\sqrt{3+1}= 3 - 5 \hspace{4mm} => 2 = -2$  EPÄTOSI    
+# $\sqrt{8+1}= 8 - 5 \hspace{4mm} => 3 = 3$   TOSI    
 # Tehtävän ratkaisu on siten x = 8.
 # ```
 # ````

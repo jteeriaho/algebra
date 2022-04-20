@@ -63,7 +63,7 @@
 # 
 # perusarvo $b=\frac {a}{p/100}=\frac{a}{p}\cdot 100$
 
-# ```{admonition} Maijalle kevään 2.5% palkankorotus toi lisää palkkaa 65 Euroa kk:ssa. Mikä oli Maijan kuukausipalkka ennen korotusta?
+# ```{admonition} Maijalle kevään 2.5% palkankorotus toi lisää palkkaa 45 Euroa kk:ssa. Mikä oli Maijan kuukausipalkka ennen korotusta?
 # :class: dropdown
 # $\frac {45}{x} = \frac{2.5}{100} => x = \frac{45}{2.5}\cdot100 = 1800 $   
 # 

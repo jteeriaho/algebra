@@ -91,7 +91,7 @@
 
 # ### Polynomin jakaminen vakiolla
 
-# Polynomi jaetaan vakiolla siten, että polynomin jokainen termi jaetaan ko. vakiolla
+# Polynomi kerrotaan vakiolla siten, että polynomin jokainen termi jaetaan ko. vakiolla
 
 # ```{admonition} Esimerkki
 # :class: tip
@@ -164,9 +164,11 @@
 # Alla olevassa kuvassa   on suoritettu jakokulmaa käyttäen jakolasku
 # $\frac {x^4 -3x^3-x^2-1}{x^2+1} $     
 # 
-# Osamääräksi on saatu $x^2 -3x -2$  ja jakojäännökseksi $3x+1$ (katso sivupaneelin video)
+# Osamääräksi on saatu $x^2 -3x -2$  ja jakojäännökseksi $3x+1$ (katso ao.video)
 
-# ![polyjako](polyjako.PNG)
+# <video width="600" height="450" controls="True">
+#     <source src="jako.mp4" type="video/mp4">
+# </video>
 
 # ## Polynomin jakaminen tekijöihin (faktorointi)
 
